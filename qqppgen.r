@@ -1,4 +1,4 @@
-gqqplot <- function (x, y, pout = seq(0,1,0.001), plot.it = TRUE,
+gqqplot <- function (x, y, pout = seq(0,1,0.001), plot.it = TRUE, line = TRUE,
                     xlab = deparse(substitute(x)),
                     ylab = deparse(substitute(y)), ...)
 {
@@ -53,6 +53,8 @@ gqqplot <- function (x, y, pout = seq(0,1,0.001), plot.it = TRUE,
   # TODO: beautify plotting code
   if (plot.it)
     plot(sx, sy, xlab = xlab, ylab = ylab, ...)
+  if(line)
+    abline(0, 1, col="red", lwd=lwd)
   invisible(list(x = sx, y = sy))
 }
 
@@ -65,7 +67,7 @@ ppoints <- function (n, a = ifelse(n <= 10, 3/8, 1/2))
   else numeric()
 }
 
-ppplot <- function(x, t, pout = seq(0,1,0.001), xlab=deparse(substitute(x)),
+gppplot <- function(x, t, pout = seq(0,1,0.001), xlab=deparse(substitute(x)),
                    ylab="Probability", line=TRUE, lwd=2, pch=3, cex=0.7,
                    cex.lab=1)
 {
@@ -84,8 +86,9 @@ ppplot <- function(x, t, pout = seq(0,1,0.001), xlab=deparse(substitute(x)),
   # X-axis: expected cumulative probabilities of the theoretical distribution
   #   of your choice, corresponding to your observed values. Basically, we
   #   plot all the F[X[i]]
-  tcdf <- ecdf(t);
-  pprobs <- tcdf(sort(x[ceiling(y*lenx)]));
+  tcdf <- ecdf(t); #XXX
+  pprobs <- tcdf(sort(x));
+  pprobs <- pprobs[ceiling(pout*lenx)]
   # pprobs <- pdist(sort(x), mean(x), sd(x), ...)
   # If the plotted points lie on X=Y diagonal, that means that the expected
   # theoretical probs and the estimated observed probs coincide which means that
@@ -96,11 +99,11 @@ ppplot <- function(x, t, pout = seq(0,1,0.001), xlab=deparse(substitute(x)),
   # in tails. Q-Q is generally preferred in the research community.
   
   # Plot the stuff
-  plot(y, pprobs, axes=FALSE, type="n", xlab=xlab, ylab=ylab, xlim=c(0,1),
+  plot(pprobs, y, axes=FALSE, type="n", xlab=xlab, ylab=ylab, xlim=c(0,1),
        ylim=c(0,1), cex.lab=cex.lab)
   box()
   
-  probs <- seq(0,1,by=0.1) 
+  #probs <- seq(0,1,by=0.1) 
   axis(1)
   axis(2)
 
