@@ -1,9 +1,10 @@
-qqplot <- function (x, y, plot.it = TRUE, xlab = deparse(substitute(x)), 
-          ylab = deparse(substitute(y)), ...)
+gqqplot <- function (x, y, pout = seq(0,1,0.001), plot.it = TRUE,
+                    xlab = deparse(substitute(x)),
+                    ylab = deparse(substitute(y)), ...)
 {
-  # Let X[i] represent the i-th order statistic (the observation
-  # that is observed to be the i-th highest value)
-  # Let F be the CDF of the proposed distribution Y
+  # Let X[i] represent the i-th order statistic (the observation that is
+  # observed to be the i-th highest value).
+  # Let F be the CDF of the proposed distribution Y.
   #
   # Y-axis: plot all the X[i] in _order_
   # X-axis: plot F^-1[(i-1/2)/n] = Quantile(X,p) = x[p * samples(X)]
@@ -34,7 +35,7 @@ qqplot <- function (x, y, plot.it = TRUE, xlab = deparse(substitute(x)),
   #                                             the left
   # "staircase pattern (plateaus and gaps)   => data have been rounded or are
   #                                             discrete
-
+  
   sx <- sort(x)
   sy <- sort(y)
   lenx <- length(sx)
@@ -45,9 +46,12 @@ qqplot <- function (x, y, plot.it = TRUE, xlab = deparse(substitute(x)),
     sx <- approx(1L:lenx, sx, n = leny)$y
   if (leny > lenx)
     sy <- approx(1L:leny, sy, n = lenx)$y
+  len <- length(sx)
+  sx <- sx[ceiling(pout * len)]
+  sy <- sy[ceiling(pout * len)]
 
   # TODO: beautify plotting code
-  if (plot.it) 
+  if (plot.it)
     plot(sx, sy, xlab = xlab, ylab = ylab, ...)
   invisible(list(x = sx, y = sy))
 }
@@ -61,16 +65,10 @@ ppoints <- function (n, a = ifelse(n <= 10, 3/8, 1/2))
   else numeric()
 }
 
-ppplot <- function(x, pdist=pnorm, xlab=deparse(substitute(x)),
+ppplot <- function(x, t, pout = seq(0,1,0.001), xlab=deparse(substitute(x)),
                    ylab="Probability", line=TRUE, lwd=2, pch=3, cex=0.7,
-                   cex.lab=1, ...)
+                   cex.lab=1)
 {
-  DOTARGS <- as.list(substitute(list(...)))[-1]
-  DOTARGS <- paste(names(DOTARGS), DOTARGS, sep="=", collapse=", ")
-  
-  PNAME <- deparse(substitute(pdist))
-  pdist <- match.fun(pdist)
-  
   # Let X[i] represent the i-th order statistic (the observation
   # that is observed to be the i-th highest value)
   # Let F be the CDF of the proposed distribution Y
@@ -80,11 +78,15 @@ ppplot <- function(x, pdist=pnorm, xlab=deparse(substitute(x)),
   #   one of the methods: rankit (most universal, and preferable for beta), Blom,
   #   Tukey or Van der Waerden. Basically, we plot (i-0.5)/n (which is found by
   #   using ppoints)
-  y <- ppoints(length(x))
+  lenx <- length(x)
+  y <- ppoints(lenx)
+  y <- y[ceiling(pout*lenx)]
   # X-axis: expected cumulative probabilities of the theoretical distribution
   #   of your choice, corresponding to your observed values. Basically, we
   #   plot all the F[X[i]]
-  pprobs <- pdist(sort(x), mean(x), sd(x), ...)
+  tcdf <- ecdf(t);
+  pprobs <- tcdf(sort(x[ceiling(y*lenx)]));
+  # pprobs <- pdist(sort(x), mean(x), sd(x), ...)
   # If the plotted points lie on X=Y diagonal, that means that the expected
   # theoretical probs and the estimated observed probs coincide which means that
   # your data follows the theoretical distribution.
@@ -114,4 +116,3 @@ ppplot <- function(x, pdist=pnorm, xlab=deparse(substitute(x)),
     abline(int, slope, col=1, lwd=lwd)
   }
 }
-
