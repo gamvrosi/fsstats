@@ -1,0 +1,74 @@
+[1] "filehot/filehot1.counts"
+[1] 47999
+[1] 47999
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+        estimate  Std. Error
+meanlog 3.223957 0.009146971
+sdlog   2.003980 0.006467878
+Loglikelihood:  -256220.2   AIC:  512444.3   BIC:  512461.9 
+Correlation matrix:
+            meanlog       sdlog
+meanlog 1.00000e+00 1.29137e-09
+sdlog   1.29137e-09 1.00000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+        estimate  Std. Error
+shape  0.3763533 0.001083626
+scale 76.3105608 0.985626936
+Loglikelihood:  -269726.9   AIC:  539457.7   BIC:  539475.3 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.3447536
+scale 0.3447536 1.0000000
+
+[1] "filehot/filehot2.counts"
+[1] 2625162
+[1] 2625162
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+meanlog 2.628955 0.0007530131
+sdlog   1.220058 0.0005324591
+Loglikelihood:  -11148517   AIC:  22297039   BIC:  22297064 
+Correlation matrix:
+              meanlog         sdlog
+meanlog  1.000000e+00 -3.080654e-09
+sdlog   -3.080654e-09  1.000000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+shape  0.5975469 0.0002162838
+scale 26.6863829 0.0292593505
+Loglikelihood:  -11906660   AIC:  23813325   BIC:  23813350 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.3361535
+scale 0.3361535 1.0000000
+
+[1] "filehot/filehot3.counts"
+[1] 2273253
+[1] 2273253
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+meanlog 2.116690 0.0007001480
+sdlog   1.055635 0.0004950774
+Loglikelihood:  -8160458   AIC:  16320919   BIC:  16320944 
+Correlation matrix:
+              meanlog         sdlog
+meanlog  1.000000e+00 -2.622928e-09
+sdlog   -2.622928e-09  1.000000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+shape  0.6009777 0.0002114794
+scale 14.7628037 0.0172520972
+Loglikelihood:  -9028223   AIC:  18056450   BIC:  18056475 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.3281223
+scale 0.3281223 1.0000000

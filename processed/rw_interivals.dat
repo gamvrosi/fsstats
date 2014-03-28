@@ -1,0 +1,12 @@
+> summary(Fn1)
+Empirical CDF:    80768 unique values with summary
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+       1    21270    58580  1014000   215900 60010000 
+> summary(Fn2)
+Empirical CDF:    53573 unique values with summary
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      1   13430   29840  152100  115900 5008000 
+> summary(Fn3)
+Empirical CDF:    58760 unique values with summary
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+1.000e+00 1.470e+04 3.238e+04 8.897e+05 7.218e+04 1.186e+10 

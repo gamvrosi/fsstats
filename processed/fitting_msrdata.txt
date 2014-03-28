@@ -1,0 +1,75 @@
+[1] "data/interivals_msr1"
+[1] 55980294
+[1] 5835279
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+meanlog 6.172701 0.0006104511
+sdlog   1.474625 0.0004316532
+Loglikelihood:  -46565781   AIC:  93131567   BIC:  93131594 
+Correlation matrix:
+             meanlog        sdlog
+meanlog 1.000000e+00 2.331361e-08
+sdlog   2.331361e-08 1.000000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+          estimate   Std. Error
+shape    0.4598041 0.0001097448
+scale 1074.5131456 1.0284429777
+Loglikelihood:  -48579306   AIC:  97158616   BIC:  97158643 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.3424064
+scale 0.3424064 1.0000000
+
+[1] "data/interivals_msr2"
+[1] 43274528
+[1] 8168333
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+meanlog 6.950843 0.0007765585
+sdlog   2.219427 0.0005491092
+Loglikelihood:  -74879354   AIC:  149758712   BIC:  149758740 
+Correlation matrix:
+             meanlog        sdlog
+meanlog 1.000000e+00 2.700486e-08
+sdlog   2.700486e-08 1.000000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+          estimate   Std. Error
+shape    0.4435224 0.0001423479
+scale 3373.4410485 6.3822402739
+Loglikelihood:  -75836915   AIC:  151673834   BIC:  151673862 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.6331649
+scale 0.6331649 1.0000000
+
+[1] "data/interivals_msr3"
+[1] 85895089
+[1] 15621140
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+         estimate   Std. Error
+meanlog 5.8961285 0.0002508475
+sdlog   0.9914392 0.0001773751
+Loglikelihood:  -114135381   AIC:  228270765   BIC:  228270794 
+Correlation matrix:
+             meanlog        sdlog
+meanlog 1.000000e+00 1.326028e-09
+sdlog   1.326028e-09 1.000000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+         estimate   Std. Error
+shape   0.5821993 7.135006e-05
+scale 616.1184399 2.830807e-01
+Loglikelihood:  -120966902   AIC:  241933807   BIC:  241933836 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.3185081
+scale 0.3185081 1.0000000
+

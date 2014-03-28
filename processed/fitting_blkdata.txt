@@ -1,0 +1,125 @@
+[1] "data/idle_c0t1d0"
+[1] 235972
+[1] 235345
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+         estimate  Std. Error
+meanlog -6.338100 0.002381465
+sdlog    1.155305 0.001683945
+Loglikelihood:  1123725   AIC:  -2247445   BIC:  -2247424 
+Correlation matrix:
+        meanlog sdlog
+meanlog       1     0
+sdlog         0     1
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+         estimate   Std. Error
+shape 0.437771046 3.809667e-04
+scale 0.003107534 1.135528e-05
+Loglikelihood:  1003808   AIC:  -2007612   BIC:  -2007592 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.2579131
+scale 0.2579131 1.0000000
+
+[1] "data/idle_c0t2d0"
+[1] 578576
+[1] 575700
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+         estimate  Std. Error
+meanlog -6.267294 0.001505863
+sdlog    1.142572 0.001064802
+Loglikelihood:  2714468   AIC:  -5428932   BIC:  -5428909 
+Correlation matrix:
+             meanlog        sdlog
+meanlog 1.000000e+00 1.866658e-10
+sdlog   1.866658e-10 1.000000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+         estimate   Std. Error
+shape 0.437931592 2.565198e-04
+scale 0.003486846 8.811112e-06
+Loglikelihood:  2404586   AIC:  -4809168   BIC:  -4809146 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.2816818
+scale 0.2816818 1.0000000
+
+[1] "data/idle_c0t3d0"
+[1] 761433
+[1] 658160
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+         estimate  Std. Error
+meanlog -5.344236 0.004416261
+sdlog    3.582783 0.003122767
+Loglikelihood:  1743570   AIC:  -3487135   BIC:  -3487112 
+Correlation matrix:
+        meanlog sdlog
+meanlog       1     0
+sdlog         0     1
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+shape 0.25856477 0.0002310699
+scale 0.03254509 0.0001648612
+Loglikelihood:  1642439   AIC:  -3284875   BIC:  -3284852 
+Correlation matrix:
+         shape    scale
+shape 1.000000 0.342757
+scale 0.342757 1.000000
+
+[1] "data/idle_c0t4d0"
+[1] 16901
+[1] 16901
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+         estimate  Std. Error
+meanlog -3.986270 0.010473042
+sdlog    1.361536 0.007405541
+Loglikelihood:  38174.6   AIC:  -76345.2   BIC:  -76329.73 
+Correlation matrix:
+        meanlog sdlog
+meanlog       1     0
+sdlog         0     1
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+        estimate  Std. Error
+shape 0.40116601 0.001456593
+scale 0.03840121 0.000775731
+Loglikelihood:  30116.52   AIC:  -60229.04   BIC:  -60213.57 
+Correlation matrix:
+         shape    scale
+shape 1.000000 0.316413
+scale 0.316413 1.000000
+
+[1] "data/idle_c0t5d0"
+[1] 242719
+[1] 234169
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+         estimate  Std. Error
+meanlog -5.723265 0.004942808
+sdlog    2.391875 0.003495090
+Loglikelihood:  803726.3   AIC:  -1607449   BIC:  -1607428 
+Correlation matrix:
+              meanlog         sdlog
+meanlog  1.000000e+00 -5.027849e-10
+sdlog   -5.027849e-10  1.000000e+00
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+        estimate   Std. Error
+shape 0.32097370 4.030537e-04
+scale 0.01171762 7.881464e-05
+Loglikelihood:  743987.5   AIC:  -1487971   BIC:  -1487950 
+Correlation matrix:
+          shape     scale
+shape 1.0000000 0.3354444
+scale 0.3354444 1.0000000
+
