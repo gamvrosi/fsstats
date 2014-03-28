@@ -3,8 +3,9 @@ fsstats
 
 scripts: 
          
-         Used when organizing system trace data, must are about the MSR traces.
-         The editedParseTrace is for both generating the disks and idle times. 
+         Used when organizing system trace data, most are about the MSR traces.
+         The editedParseTrace your blk script for both generating the disks and 
+         idle times with small updates (start time recorded in idle files now). 
 
 rfiles: 
 
