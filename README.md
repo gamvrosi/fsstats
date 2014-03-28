@@ -28,3 +28,5 @@ plots:
 
          The final set of plots and some example fits are stored here. 
 
+
+You can safely ignore anything found on c159 and anything in fs.csl's rfiles/scripts/plot folders as they are all either outdated or small modifications on the main rfiles and scripts
