@@ -24,5 +24,6 @@ processed:
          All are text data containing summaries of fits or traces(mostly MSR)
 
 plots: 
+
          The final set of plots and some example fits are stored here. 
 
