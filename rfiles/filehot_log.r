@@ -19,7 +19,8 @@ mtext(text="Fraction of accesses",side=2,line=2.5)
 abline(h=seq(0, 1, by=0.05), col="gray50", lty=3, lwd=.7);
 abline(v=xtix, col="gray50", lty=3, lwd=.7);
 
-for (trace in c("./filehot1.counts", "./filehot2.counts", "./filehot3.counts")) {
+for (trace in c("../data/filehot1.counts", "../data/filehot2.counts",
+				"../data/filehot3.counts")) {
   ffreqs <- read.csv(trace, header=FALSE);
   data <- as.matrix(ffreqs);
   rm(ffreqs);
