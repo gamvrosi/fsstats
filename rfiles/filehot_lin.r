@@ -2,14 +2,15 @@
 
 # dopar command for parallel loop
 
-counts <- c("data/filehot1.counts", "data/filehot2.counts",
-			"data/filehot3.counts");
+counts <- c("../data/filehot1.counts", "../data/filehot2.counts",
+			"../data/filehot3.counts");
 
 doload <- TRUE;
 docdfs <- TRUE;
-doplot <- FALSE;
+doplot <- TRUE;
+doplot_fb <- FALSE;
 # dofit <- FALSE;
-dofbench <- TRUE;
+dofbench <- FALSE;
 
 # Load and sort data
 if (doload) {
@@ -34,18 +35,16 @@ if (docdfs) {
 		cat(paste("[",i,"] ", sep=""));
 		
 		ecdfs[[i]] <- c(0);
-		strt<-Sys.time()
 		pidx <- 1
-    psum <- 0
+		psum <- 0
 		for (q in frx) {
 			if (q) {
 				idx <- ceiling(q * samples);
-        psum <- psum + sum(data[[i]][pidx:idx])
+				psum <- psum + sum(data[[i]][pidx:idx])
 				ecdfs[[i]] <- c(ecdfs[[i]], psum / total);
-        pidx <- idx+1
+				pidx <- idx+1
 			}
 		}
-		print(Sys.time()-strt)
 		ecdfs[[i]] <- 1 - rev(ecdfs[[i]]);
 	}
 	cat(" Done.\n");
