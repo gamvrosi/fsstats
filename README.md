@@ -16,7 +16,7 @@ rfiles:
 data: 
 
          Only a subset of the data be stored on git, the rest can be found in
-         /mnt/data/abdi Idle/hotness are stored in folders while the raw data is 
+         /mnt/data/abdi Idle/hotness are stored in folders while the raw data is
          stored as tarballs
 
 processed: 
@@ -28,5 +28,14 @@ plots:
 
          The final set of plots and some example fits are stored here. 
 
+filebench: 
 
-You can safely ignore anything found on c159 and anything in fs.csl's rfiles/scripts/plot folders as they are all either outdated or small modifications on the main rfiles and scripts
+         Data for various fileset sizes are stored in filebench_data. Each txt 
+         file contains 90*proc num data points. (note for a low fileset size 
+         this may not be the case due to lack of free files available)
+
+         Process numbers vary from 1-5, threads very from 5-65 in multiples of 5
+
+You can safely ignore anything found on c159 and anything in fs.csl's 
+rfiles/scripts/plot folders as they are all either outdated or small 
+modifications on the main rfiles and scripts
