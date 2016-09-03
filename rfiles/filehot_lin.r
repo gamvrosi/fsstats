@@ -1,14 +1,10 @@
-
-
-# dopar command for parallel loop
-
 counts <- c("../data/filehot1.counts", "../data/filehot2.counts",
 			"../data/filehot3.counts");
 
 doload <- TRUE;
 docdfs <- TRUE;
-doplot <- TRUE;
-doplot_fb <- FALSE;
+doplot <- FALSE;
+doplot_fb <- TRUE;
 # dofit <- FALSE;
 dofbench <- FALSE;
 
@@ -116,8 +112,8 @@ xstep <- 0.05;
 ystep <- 0.05;
 	
 llabels <- NULL;
-lcolors <- c("red","blue4","olivedrab4","goldenrod2");
-ltypes <- c("solid","solid","solid","solid");
+lcolors <- c("red","blue4","olivedrab4");#,"goldenrod2");
+ltypes <- c("solid","solid","solid");#,"solid");
 lwidths <- c(2,2,2,2);
 
 if (doplot)
@@ -139,6 +135,14 @@ for (i in seq(1, length(ecdfs))) {
 # 	lines(x=frx, y=fcdfs[[i]], type='l', lty="dashed", lwd=lwidths[i],
 # 		  col=lcolors[i]);
 	llabels <- c(llabels, paste("Total files = ", sum(data[[i]]), sep=""));
+}
+
+if (doplot_fb) {
+	lines(x=c(0,1), y=c(0,1), type='l', lty="dashed", lwd=2, col="black");
+	llabels <- c(llabels, "Filebench");
+	lcolors <- c(lcolors, "black");
+	lwidths <- c(lwidths, 2);
+	ltypes <- c(ltypes, "dashed");
 }
 	
 legend("bottomright", "(x,y)", llabels, cex=1.0, col=lcolors, lty=ltypes,

@@ -8,7 +8,7 @@ docdfs <- FALSE;
 docdfs_fb <- FALSE;
 # dofit <- FALSE;
 dofbench <- FALSE;
-doplot <- TRUE;
+doplot <- FALSE;
 doplot_fb <- TRUE;
 
 # Load and sort data
